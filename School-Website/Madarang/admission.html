@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission - Lyceum Of Alabang</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Add specific styles for the Admission page */
+        .admission-form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .admission-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+			color: #000;
+        }
+
+        .admission-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .admission-submit {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .admission-submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lyceum Of Alabang</h1>
+        <img class="logo" src="https://lyceumalabang.edu.ph/wp-content/uploads/2023/07/logo.png" alt="College Logo">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Admission Form</h2>
+        <!-- Admission Form -->
+        <form class="admission-form" onsubmit="return validateForm()">
+            <div class="admission-title">Personal Information</div>
+            <label style="color: #000;" for="first_name">First Name:</label>
+            <input class="admission-input" type="text" id="first_name" name="first_name" required>
+
+            <label style="color: #000;" for="last_name">Last Name:</label>
+            <input class="admission-input" type="text" id="last_name" name="last_name" required>
+
+            <label style="color: #000;" for="email">Email:</label>
+            <input style="color: #000;" class="admission-input" type="email" id="email" name="email" required>
+
+            <label style="color: #000;" for="phone">Phone Number:</label>
+            <input class="admission-input" type="tel" id="phone" name="phone" required>
+
+            <div class="admission-title">Desired Course</div>
+            <label style="color: #000;" for="course">Select the course you wish to enroll in:</label>
+            <select class="admission-input" id="course" name="course">
+                <option value="computer_science">Computer Science</option>
+                <option value="mathematics">Mathematics</option>
+                <option value="english">English</option>
+                <option value="sociology">Sociology</option>
+                <option value="accounting">Accounting</option>
+                <option value="marketing">Marketing</option>
+            </select>
+
+            <div class="admission-title">Additional Information (Optional)</div>
+            <label style="color: #000;" for="message">Any additional information or questions:</label>
+            <textarea class="admission-input" id="message" name="message" rows="4"></textarea>
+
+            <input class="admission-submit" type="submit" value="Submit">
+        </form>
+    </main>
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("first_name").value;
+            var lastName = document.getElementById("last_name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            if (firstName === "" || lastName === "" || email === "" || phone === "") {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+
+            alert("Application submitted.");
+            return false;
+        }
+    </script>
+</body>
+</html>
