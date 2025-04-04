@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .signin-table {
+            width: 300px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border: 2px solid #000;
+            border-collapse: collapse;
+        }
+
+        .signin-table td {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        .header {
+            
+            color: Black;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .header td {
+            padding: 15px;
+            border: none;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+		.form-button{
+			margin-left: 100px;
+			text-align: center;
+			width: 30%;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 0; /* Square corners */
+		}
+
+        .form-input input[type="text"],
+        .form-input input[type="password"]{
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 0; /* Square corners */
+        }
+
+        .form-button {
+            /* Black */
+            color: Black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table class="signin-table">
+        <tr>
+            <td colspan="2" class="header">Sign In</td>
+        </tr>
+        <tr>
+            <td class="form-label">Email</td>
+            <td class="form-input"><input type="text" id="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td class="form-label">Password</td>
+            <td class="form-input"><input type="password" id="password" name="password" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit" class="form-button">Sign In</button></td>
+        </tr>
+    </table>
+</body>
+</html>

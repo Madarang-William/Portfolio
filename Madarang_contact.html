@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-box {
+            width: 300px;
+            margin: 50px auto;
+            background-color: #FCF3CF; 
+            border: 2px solid #000;
+            border-radius: 0; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #ff0000; 
+            color: white;
+            padding: 10px;
+            border-radius: 0; 
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        .form-input {
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .form-input label {
+            display: block;
+            font-weight: bold;
+            opacity: 0.5; 
+            transition: opacity 0.3s ease-in-out;
+            position: absolute;
+            pointer-events: none;
+            left: 10px;
+            top: 10px;
+        }
+
+        .form-input input[type="text"],
+        .form-input input[type="email"],
+        .form-input textarea {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 0; 
+            margin-top: 5px;
+            padding-left: 10px; 
+        }
+
+        .form-input input[type="text"]:focus + label,
+        .form-input input[type="email"]:focus + label,
+        .form-input textarea:focus + label {
+            opacity: 0; 
+        }
+
+        .form-button {
+            background-color: #F7DC6F; 
+			width: 90%;
+            color: black;
+            padding: 10px 20px;
+			border: 2px solid #000;
+            border-radius: 0; 
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-box">
+        <div class="header">
+            <h2>Contact Us!</h2>
+        </div>
+        <form>
+            <div class="form-input">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Name</label>
+            </div>
+            <div class="form-input">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="form-input">
+                <input type="text" id="subject" name="subject" required>
+                <label for="subject">Subject</label>
+            </div>
+            <div class="form-input">
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="message">Message</label>
+            </div>
+            <button type="submit" class="form-button">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>

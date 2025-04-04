@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 20%;
+            margin: 0 auto;
+            background-color: lightblue;
+            border: 2px solid blue;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2">Registration Form</th>
+        </tr>
+        <tr>
+            <td>Enter Name:</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Enter Password:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>Enter Address:</td>
+            <td><input type="text" name="address"></td>
+        </tr>
+        <tr>
+            <td>Select Game:</td>
+            <td>
+                <input type="checkbox" name="game" value="hockey"> Hockey
+                <input type="checkbox" name="game" value="football"> Football
+                <input type="checkbox" name="game" value="badminton"> Badminton
+                <input type="checkbox" name="game" value="cricket"> Cricket
+                <input type="checkbox" name="game" value="volleyball"> Volleyball
+            </td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+            </td>
+        </tr>
+        <tr>
+            <td>Select Age:</td>
+            <td><input type="text" name="age"></td>
+        </tr>
+        <tr>
+            <td>Select Photo:</td>
+            <td><input type="file" name="photo"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color: blue;">
+                <input type="button" value="Click Me">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit Form" disabled>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
