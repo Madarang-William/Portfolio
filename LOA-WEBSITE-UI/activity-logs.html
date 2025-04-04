@@ -1,0 +1,126 @@
+<html></html>
+<head>
+  <title>Lyceum of Alabang</title>
+  <link rel="stylesheet" href="activity.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <img src="loa-logo-1.png" alt="Lyceum of Alabang Logo">
+      <h1 align="center">Admin</h1>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="activity-logs.html" class="active">Activity Logs</a></li>
+        <li><a href="#">User Management</a></li>
+        <li><a href="#">Document Maintenance</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+    <div class="main">
+        <h1>Activity Logs</h1>
+        <div class="card-container">
+            
+        </div>
+
+        <div class="header-controls">
+            <!-- Left-side controls: Search, Show Entries, Category, Department -->
+            <div class="left-controls">
+              <div class="search-show-entries">
+                <div class="search-name">
+                  <label for="search">Search Name:</label>
+                  <input type="text" id="search" name="search" placeholder="Enter name">
+                </div>
+                <div class="show-entries">
+                  <label for="entries">Show Entries:</label>
+                  <select id="entries" name="entries">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                  </select>
+                </div>
+              </div>
+              <div class="filter-selectors">
+                <div class="category-filter">
+                  <label for="category">Category:</label>
+                  <select id="category" name="category">
+                    <option value="all">All</option>
+                    <option value="category1">Form 138</option>
+                    <option value="category2">Birth certificate</option>
+                    <option value="category2">Form 137</option>
+                  </select>
+                </div>
+                <div class="department-filter">
+                  <label for="department">Department:</label>
+                  <select id="department" name="department">
+                    <option value="all">All Departments</option>
+                    <option value="department1">CCS</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="date-input">
+                <label for="date">Input Date:</label>
+                <input type="date" id="date" name="date">
+              </div>
+          
+            <!-- Right-side controls: Date Sorter -->
+            <div class="date-sorter">
+              <label for="date-sort">Date:</label>
+              <button class="sort-up" title="Sort Ascending">&#9650;</button> <!-- Arrow up -->
+              <button class="sort-down" title="Sort Descending">&#9660;</button> <!-- Arrow down -->
+            </div>
+          </div>
+
+              
+              
+
+              <div class="staff-table-card">
+                <div class="card">
+                  <div class="card-body">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>STAFF NAME</th>
+                          <th>DEPT.</th>
+                          <th>ACTIVITY</th>
+                          <th>CATEGORY</th>
+                          <th>DATE ACTION</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Elloise, Marjorie</td>
+                          <td>CCS</td>
+                          <td>Opened for infomation check</td>
+                          <td class="category-activity">FORM 138</td>
+                          <td>MM/DD/YYYY</td>
+                        </tr>
+                        <tr>
+                          <td>Flores, Mika</td>
+                          <td>CCS</td>
+                          <td>Uploaded a file</td>
+                          <td class="category-activity">BIRTH CERTIFICATE</td>
+                          <td>MM/DD/YYYY</td>
+                        </tr>
+                        <tr>
+                          <td>Minaj, Onika Marie</td>
+                          <td>CCS</td>
+                          <td>Archives the outdated file</td>
+                          <td class="category-activity">FORM 137</td>
+                          <td>MM/DD/YYYY</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#">Show More</a>
+                  </div>
+                </div>
+              </div>              
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

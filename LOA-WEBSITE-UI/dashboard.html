@@ -1,0 +1,162 @@
+<html>
+<head>
+  <title>Lyceum of Alabang</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <img src="loa-logo-1.png" alt="Lyceum of Alabang Logo">
+      <h1 align="center">Admin</h1>
+      <ul>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="activity-logs.html">Activity Logs</a></li>
+        <li><a href="#">User Management</a></li>
+        <li><a href="#">Document Maintenance</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+    <div class="main">
+        <h1>Lyceum of Alabang</h1>
+        <p>Document management system</p>
+        <div class="card-container">
+            <div class="card small-card">
+              <p>0</p>
+              <div class="card-header">Locked Accounts</div>
+              <div class="card-body">
+              </div>
+            </div>
+            <div class="card small-card">
+              <p>1</p>
+              <div class="card-header">Archived Documents</div>
+              <div class="card-body">
+              </div>
+            </div>
+          </div>
+          <h2 text align="center">Recent Activity</h1>
+            <button class="notification-button" id="notificationBtn">Send Notification</button>
+
+           
+<div id="notificationModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Send Notification</h2>
+    <form>
+      <label for="notification-title">Title:</label>
+      <input type="text" id="notification-title" name="notification-title" placeholder="Enter notification title" required><br>
+
+      <label for="notification-message">Message:</label>
+      <textarea id="notification-message" name="notification-message" placeholder="Enter your message" required></textarea><br>
+
+      <button type="submit" class="send-btn">Send</button>
+    </form>
+  </div>
+</div>
+
+
+            <div class="header-controls">
+                
+                <div class="show-entries">
+                  <label for="entries">Show Entries:</label>
+                  <select id="entries">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                </div>
+              
+                <div class="search-bar">
+                  <input type="text" id="search" placeholder="Search...">
+                </div>
+              </div>
+
+              <div class="staff-table-card">
+                <div class="card">
+                  <div class="card-body">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>STAFF NAME</th>
+                          <th>ACTIVITY</th>
+                          <th>STUDENT'S NAME</th>
+                          <th>CATEGORY</th>
+                          <th>DATE UPLOADED</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Elloise, Marjorie</td>
+                          <td class="opened-activity">OPENED</td>
+                          <td>Batumbakal, Kenjie</td>
+                          <td class="category-activity">FORM 138</td>
+                          <td>MM/DD/YYYY</td>
+                        </tr>
+                        <tr>
+                          <td>Flores, Mika</td>
+                          <td class="updated-activity">UPDATED</td>
+                          <td>Bato, Marlyn</td>
+                          <td class="category-activity">BIRTH CERTIFICATE</td>
+                          <td>MM/DD/YYYY</td>
+                        </tr>
+                        <tr>
+                          <td>Minaj, Onika Marie</td>
+                          <td class="updated-activity">UPDATED</td>
+                          <td>Etivac, Jep</td>
+                          <td class="category-activity">FORM 137</td>
+                          <td>MM/DD/YYYY</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#">Show More</a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="storage-use-card">
+                <div class="card-header">Storage Use</div>
+                <div class="storage-container">
+                  <div class="storage-bar">
+                    <div class="storage-fill" style="width: 50%;"></div>
+                  </div>
+                  <p>250 GB free of 500 GB</p>
+                </div>
+              </div>
+              
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  
+  var modal = document.getElementById("notificationModal");
+  
+ 
+  var btn = document.getElementById("notificationBtn");
+  
+  
+  var span = document.getElementsByClassName("close")[0];
+  
+ 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+ 
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  
+</html>
